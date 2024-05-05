@@ -31,8 +31,6 @@ Sprofile-service/src/main/java/com/cowd/profileservice/mapper/UserProfileMapper.
 _identity-service/src/main/java/com/cowd/identityservice/dto/request/ProfileCreationRequest.java,5\c\5c812849f48b9885df8d29cdb72ce7e044803c23
 Ä
 Pidentity-service/src/main/java/com/cowd/identityservice/service/UserService.java,7\7\772aea0c6979cf98fe7cf1039836836d102eb518
-w
-Gidentity-service/src/main/java/com/cowd/identityservice/enums/Role.java,4\4\447e9d55630b213562a0e152cd643a969c545141
 Ñ
 Tidentity-service/src/main/java/com/cowd/identityservice/constant/PredefinedRole.java,c\e\ce37e0dda23c89ac710ccf14ca81475be147554a
 ê
@@ -59,3 +57,11 @@ Nidentity-service/src/main/java/com/cowd/identityservice/mapper/UserMapper.java
 ]identity-service/src/main/java/com/cowd/identityservice/dto/response/UserProfileResponse.java,9\f\9f68566553e269be1056af74b5c9cc4fe3190188
 x
 Hidentity-service/src/main/java/com/cowd/identityservice/entity/User.java,f\9\f9bff912deb71b211ce9fb748031102e53014a0f
+C
+api-gateway/pom.xml,2\b\2bfa2b108f2439e99e004f4085b58c22cf995f73
+D
+api-gateway/mvnw.cmd,4\e\4e78ccd1f7fc9cfe04c98f2b5dff3904ec2e9bd6
+x
+Hapi-gateway/src/main/java/com/cowd/apigateway/ApiGatewayApplication.java,3\5\35ac313c77936b57a5ca2b52dbb78fd5ad774281
+H
+profile-service/mvnw.cmd,0\8\08cf71dac754e83225af267ad4983a8815b89e8f
