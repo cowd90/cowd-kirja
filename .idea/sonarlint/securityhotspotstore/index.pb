@@ -65,3 +65,5 @@ x
 Hapi-gateway/src/main/java/com/cowd/apigateway/ApiGatewayApplication.java,3\5\35ac313c77936b57a5ca2b52dbb78fd5ad774281
 H
 profile-service/mvnw.cmd,0\8\08cf71dac754e83225af267ad4983a8815b89e8f
+“
+cprofile-service/src/main/java/com/cowd/profileservice/controller/InternalUserProfileController.java,8\1\81effa04dad828d10100999f6c69bdbf9914bbac
