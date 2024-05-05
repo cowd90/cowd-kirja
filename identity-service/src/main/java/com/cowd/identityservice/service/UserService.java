@@ -1,37 +1,42 @@
 package com.cowd.identityservice.service;
 
-import java.util.HashSet;
-import java.util.List;
-
+import com.cowd.identityservice.constant.PredefinedRole;
+import com.cowd.identityservice.dto.request.UserCreationRequest;
+import com.cowd.identityservice.dto.request.UserUpdateRequest;
+import com.cowd.identityservice.dto.response.UserResponse;
+import com.cowd.identityservice.entity.Role;
+import com.cowd.identityservice.entity.User;
+import com.cowd.identityservice.exception.AppException;
+import com.cowd.identityservice.exception.ErrorCode;
+import com.cowd.identityservice.mapper.ProfileMapper;
+import com.cowd.identityservice.mapper.UserMapper;
+import com.cowd.identityservice.repository.RoleRepository;
+import com.cowd.identityservice.repository.UserRepository;
+import com.cowd.identityservice.repository.httpclient.ProfileClient;
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.cowd.identityservice.dto.request.UserCreationRequest;
-import com.cowd.identityservice.dto.request.UserUpdateRequest;
-import com.cowd.identityservice.dto.response.UserResponse;
-import com.cowd.identityservice.entity.User;
-import com.cowd.identityservice.enums.Role;
-import com.cowd.identityservice.exception.AppException;
-import com.cowd.identityservice.exception.ErrorCode;
-import com.cowd.identityservice.mapper.UserMapper;
-import com.cowd.identityservice.repository.RoleRepository;
-import com.cowd.identityservice.repository.UserRepository;
-
-import lombok.AccessLevel;
-import lombok.RequiredArgsConstructor;
-import lombok.experimental.FieldDefaults;
+import java.util.HashSet;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
+@Slf4j
 public class UserService {
     UserRepository userRepository;
     RoleRepository roleRepository;
     UserMapper userMapper;
+    ProfileMapper profileMapper;
     PasswordEncoder passwordEncoder;
+    ProfileClient profileClient;
 
     public UserResponse createUser(UserCreationRequest request) {
 
@@ -42,12 +47,18 @@ public class UserService {
         User user = userMapper.toUser(request);
         user.setPassword(passwordEncoder.encode(request.getPassword()));
 
-        HashSet<String> roles = new HashSet<>();
-        roles.add(Role.USER.name());
+        HashSet<Role> roles = new HashSet<>();
+        roleRepository.findById(PredefinedRole.USER_ROLE).ifPresent(roles::add);
 
-        //        user.setRoles(roles);
+        user.setRoles(roles);
+        user = userRepository.save(user);
 
-        return userMapper.toUserResponse(userRepository.save(user));
+        var profileRequest = profileMapper.toProfileCreationRequest(request);
+        profileRequest.setUserId(user.getId());
+
+        profileClient.createProfile(profileRequest);
+
+        return userMapper.toUserResponse(user);
     }
 
     public UserResponse getMyInfo() {
