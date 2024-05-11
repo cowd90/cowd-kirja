@@ -23,7 +23,7 @@ import com.cowd.identityservice.repository.UserRepository;
 
 @SpringBootTest
 @TestPropertySource("/test.properties")
-public class UserServiceTest {
+class UserServiceTest {
     @Autowired
     private UserService userService;
 
@@ -58,9 +58,6 @@ public class UserServiceTest {
         user = User.builder()
                 .id("sdjkzghzg")
                 .username("scottd980")
-                .firstName("Scott")
-                .lastName("Nguyen")
-                .dob(dob)
                 .build();
     }
 

@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/users")
 @RequiredArgsConstructor
@@ -20,6 +22,11 @@ public class UserProfileController {
     @GetMapping("/{profileId}")
     UserProfileResponse getProfile(@PathVariable("profileId") String id) {
         return userProfileService.getProfile(id);
+    }
+
+    @GetMapping
+    List<UserProfileResponse> getAllProfiles() {
+        return userProfileService.getAllProfiles();
     }
 
 }

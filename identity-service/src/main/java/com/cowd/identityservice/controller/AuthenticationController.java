@@ -2,6 +2,7 @@ package com.cowd.identityservice.controller;
 
 import java.text.ParseException;
 
+import com.cowd.identityservice.service.AuthenticationService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cowd.identityservice.dto.request.*;
 import com.cowd.identityservice.dto.response.AuthenticationResponse;
 import com.cowd.identityservice.dto.response.IntrospectResponse;
-import com.cowd.identityservice.service.AuthenticationService;
 import com.nimbusds.jose.JOSEException;
 
 import lombok.AccessLevel;
