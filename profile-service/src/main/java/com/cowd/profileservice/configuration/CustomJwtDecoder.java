@@ -1,4 +1,4 @@
-package com.cowd.identityservice.configuration;
+package com.cowd.profileservice.configuration;
 
 import com.nimbusds.jwt.SignedJWT;
 import org.springframework.security.oauth2.jwt.Jwt;

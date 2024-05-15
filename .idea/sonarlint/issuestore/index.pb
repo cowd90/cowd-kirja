@@ -135,3 +135,17 @@ r
 Bapi-gateway/src/main/java/com/cowd/apigateway/dto/ApiResponse.java,5\b\5b023586918575e0483896f47d973242ae6f0eb8
 á
 Wapi-gateway/src/main/java/com/cowd/apigateway/configuration/WebClientConfiguration.java,b\2\b2ab9d4b18996225d065f3d15c5c8ea779caec41
+â
+Yprofile-service/src/main/java/com/cowd/profileservice/configuration/CustomJwtDecoder.java,0\f\0f409fb22b0ddbebf5533ed29dfa0c54fb61487e
+î
+dprofile-service/src/main/java/com/cowd/profileservice/configuration/JwtAuthenticationEntryPoint.java,e\6\e643b49a378b8c7567343341676e269c849a2c39
+~
+Nprofile-service/src/main/java/com/cowd/profileservice/exception/ErrorCode.java,7\a\7ae709ca544989683eba36c46f77a80c4ed89558
+Ç
+Rprofile-service/src/main/java/com/cowd/profileservice/dto/request/ApiResponse.java,9\1\91cb20841b7afec687da4ad10c1f11d0c7680d44
+á
+Wprofile-service/src/main/java/com/cowd/profileservice/configuration/SecurityConfig.java,3\9\39456f90f3abefcf038526d60daf52b8e79b1d31
+Å
+Qprofile-service/src/main/java/com/cowd/profileservice/exception/AppException.java,5\2\52029d9f8a603f106b583db0b858aa962ccf7370
+ã
+[profile-service/src/main/java/com/cowd/profileservice/exception/GlobalExceptionHandler.java,9\5\95ae4bcff207cf62f2295daf1ffda7f21d73d5a3
