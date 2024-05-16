@@ -141,11 +141,11 @@ Yprofile-service/src/main/java/com/cowd/profileservice/configuration/CustomJwtDe
 dprofile-service/src/main/java/com/cowd/profileservice/configuration/JwtAuthenticationEntryPoint.java,e\6\e643b49a378b8c7567343341676e269c849a2c39
 ~
 Nprofile-service/src/main/java/com/cowd/profileservice/exception/ErrorCode.java,7\a\7ae709ca544989683eba36c46f77a80c4ed89558
-Ç
-Rprofile-service/src/main/java/com/cowd/profileservice/dto/request/ApiResponse.java,9\1\91cb20841b7afec687da4ad10c1f11d0c7680d44
 á
 Wprofile-service/src/main/java/com/cowd/profileservice/configuration/SecurityConfig.java,3\9\39456f90f3abefcf038526d60daf52b8e79b1d31
 Å
 Qprofile-service/src/main/java/com/cowd/profileservice/exception/AppException.java,5\2\52029d9f8a603f106b583db0b858aa962ccf7370
 ã
 [profile-service/src/main/java/com/cowd/profileservice/exception/GlobalExceptionHandler.java,9\5\95ae4bcff207cf62f2295daf1ffda7f21d73d5a3
+õ
+kidentity-service/src/main/java/com/cowd/identityservice/configuration/AuthenticationRequestInterceptor.java,7\d\7dc5c9ee67dfccc8c4ae21d0e55755dcfef03abf
