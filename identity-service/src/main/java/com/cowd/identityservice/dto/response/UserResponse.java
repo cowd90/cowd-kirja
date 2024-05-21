@@ -17,9 +17,6 @@ public class UserResponse {
     String id;
     String username;
     String password;
-    String firstName;
-    String lastName;
-    LocalDate dob;
 
     @ElementCollection
     Set<RoleResponse> roles;
