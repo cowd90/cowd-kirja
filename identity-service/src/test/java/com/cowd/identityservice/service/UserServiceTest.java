@@ -50,9 +50,6 @@ class UserServiceTest {
         response = UserResponse.builder()
                 .id("sdjkzghzg")
                 .username("scottd980")
-                .firstName("Scott")
-                .lastName("Nguyen")
-                .dob(dob)
                 .build();
 
         user = User.builder()

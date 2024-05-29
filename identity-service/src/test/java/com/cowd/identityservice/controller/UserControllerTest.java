@@ -28,7 +28,7 @@ import lombok.extern.slf4j.Slf4j;
 @SpringBootTest
 @AutoConfigureMockMvc
 @TestPropertySource("/test.properties")
-public class UserControllerTest {
+class UserControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -55,9 +55,6 @@ public class UserControllerTest {
         response = UserResponse.builder()
                 .id("sdjkzghzg")
                 .username("scottd980")
-                .firstName("Scott")
-                .lastName("Nguyen")
-                .dob(dob)
                 .build();
     }
 

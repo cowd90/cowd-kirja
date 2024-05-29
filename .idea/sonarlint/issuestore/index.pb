@@ -149,3 +149,7 @@ Qprofile-service/src/main/java/com/cowd/profileservice/exception/AppException.ja
 [profile-service/src/main/java/com/cowd/profileservice/exception/GlobalExceptionHandler.java,9\5\95ae4bcff207cf62f2295daf1ffda7f21d73d5a3
 ›
 kidentity-service/src/main/java/com/cowd/identityservice/configuration/AuthenticationRequestInterceptor.java,7\d\7dc5c9ee67dfccc8c4ae21d0e55755dcfef03abf
+Š
+Zidentity-service/src/test/java/com/cowd/identityservice/controller/UserControllerTest.java,7\9\79c786db4a6bed8d40469d1f057decc3dfc5914e
+•
+eidentity-service/src/test/java/com/cowd/identityservice/controller/UserControllerIntegrationTest.java,9\c\9c7977b055868bf26435d1c19a39a4c05e8a7a05
